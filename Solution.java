@@ -1,8 +1,14 @@
 package Assignment;
 
 public class Solution{
+	
+	public static int fly;
+	public static int swim;
+	public static int sing;
+	public static int walk;
 
    public static void main(String args[]){
+	   
 	   
 	 /*  
 	 // Solution 1
@@ -24,7 +30,7 @@ public class Solution{
 	   
 	  // Soultion 3
 	  Rooster rooster = new Rooster();
-	  rooster.makeSounds(); */
+	  rooster.makeSounds(); 
 	  
 	  
 	  // Soultion 4
@@ -39,7 +45,41 @@ public class Solution{
 	  parrotwithDog.makeSounds();
 	  
 	  Parrot parrotwithRooster = new Parrot( rooster);
-	  parrotwithRooster.makeSounds();
+	  parrotwithRooster.makeSounds(); */
+	   
+	   
+	   
+	   Animal[] animals = new Animal[]{
+               new Bird(), // Walk 
+               new Duck(), // Fly, Walk
+               new Chicken(), // Walk
+               new Rooster(), // Walk
+               new Parrot( new Cat()), // Fly, Walk
+               new Fish(), // Swim
+               new Shark(), // Swim
+               new ClownFish(), // Swim
+               new Dolphin(), // Swim
+               new Dog(), // Walk
+               new Butterfly(), // Fly
+               new Cat() // Walk
+       };
+	   
+	   for ( int i = 0; i <= animals.length ; i ++ ) {
+		   if( animals[i] instanceof WalkingAnimals) {
+			   walk++ ;
+		   } else if ( animals[i] instanceof Flyers ) {
+			   fly++;
+		   } else if ( animals[i] instanceof Swimmers ) {
+			   swim++;
+		   } else if ( animals[i] instanceof Sounds ) {
+			   sing++;
+		   }		   
+	   }
+	   
+	   System.out.println("Animals walk" + walk );
+	   System.out.println("Animals fly" + fly);
+	   System.out.println("Animals swim" + swim ); 
+	   System.out.println("Animals sing" + sing );
 	   	      
    }
 }

@@ -1,6 +1,6 @@
 package Assignment;
 
-public class Dolphin implements Swimmers{
+public class Dolphin extends Animal implements Swimmers{
 
 	@Override
 	public void swim() {
