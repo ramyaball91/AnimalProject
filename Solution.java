@@ -4,9 +4,14 @@ public class Solution{
 
    public static void main(String args[]){
 
-     Bird bird = new Bird();
-     bird.walk();
-     bird.fly();
-     bird.sing();
+     
+     // Soultion 2
+     Duck duck = new Duck();
+     duck.swim();
+     duck.makeSounds();
+     
+     Chicken chick = new Chicken();
+     chick.walk();
+     chick.makeSounds();
    }
 }
